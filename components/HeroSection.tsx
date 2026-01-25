@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BUSINESS_INFO, CONTACT_LINKS } from "../lib/constants";
 
 export default function HeroSection() {
   return (
@@ -42,62 +43,36 @@ export default function HeroSection() {
           Experience divine hospitality in the spiritual heart of Ayodhya. Comfortable rooms, warm service, and sacred ambiance await you.
         </p>
 
-        {/* Primary CTA (white outlined) and secondary row (orange/green) */}
-        <div className="flex flex-col items-center justify-center gap-5">
-          {/* Book Now (white) */}
+        {/* Call and WhatsApp buttons - stacked horizontally on all screens */}
+        <div className="flex flex-row gap-4 justify-center items-center flex-wrap">
+          {/* Call button with phone number */}
           <a
-            id="hero-book-now"
-            href="https://wa.me/918295588176?text=I%20would%20like%20to%20book%20a%20room%20at%20Sri%20Janaki%20Mahal%20Trust"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 transition-all duration-300 inline-flex items-center gap-2"
-            aria-label="Book Now on WhatsApp"
+            id="hero-call"
+            href={CONTACT_LINKS.phone}
+            className="px-6 py-3 rounded-xl bg-amber-600 text-white font-semibold hover:bg-amber-700 transition-all duration-300 inline-flex items-center gap-2 shadow-lg"
+            aria-label={`Call ${BUSINESS_INFO.phone}`}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            Book Now
+            <span className="hidden sm:inline">Call</span>
+            <span>{BUSINESS_INFO.phone}</span>
           </a>
-
-          {/* Side-by-side Call and WhatsApp buttons */}
-          <div className="flex flex-row gap-4 justify-center items-center">
-            <a
-              id="hero-call"
-              href="tel:+918295588176"
-              className="px-6 py-3 rounded-xl bg-amber-600 text-white font-semibold hover:bg-amber-700 transition-all duration-300 inline-flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call Now
-            </a>
-            <a
-              id="hero-whatsapp"
-              href="https://wa.me/918295588176"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-700 transition-all duration-300 inline-flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.335 1.236-3.356 2.192-1.048 1.007-1.954 2.14-2.625 3.646-.735 1.7-1.14 3.6-.788 5.629.793 4.811 4.823 8.52 9.617 8.52 1.214 0 2.389-.184 3.514-.547 1.265-.41 2.439-1.04 3.466-1.872 1.048-.87 1.954-1.956 2.625-3.462.735-1.7 1.14-3.6.788-5.629-.793-4.811-4.823-8.52-9.617-8.52z" />
-              </svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-        {/* Mobile Number Displayed Nicely and Clickable */}
-        <div className="mt-6 flex flex-col items-center">
+          
+          {/* WhatsApp button */}
           <a
-            href="tel:+918295588176"
-            className="text-lg sm:text-xl font-semibold text-gray-700 bg-white/70 px-6 py-3 rounded-lg shadow inline-flex items-center gap-2 border border-amber-200 hover:bg-amber-50 transition cursor-pointer select-all"
-            title="Click to Call"
+            id="hero-whatsapp"
+            href={CONTACT_LINKS.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-700 transition-all duration-300 inline-flex items-center gap-2 shadow-lg"
+            aria-label="Contact us on WhatsApp"
           >
-            <svg className="h-6 w-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.144l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.335 1.236-3.356 2.192-1.048 1.007-1.954 2.14-2.625 3.646-.735 1.7-1.14 3.6-.788 5.629.793 4.811 4.823 8.52 9.617 8.52 1.214 0 2.389-.184 3.514-.547 1.265-.41 2.439-1.04 3.466-1.872 1.048-.87 1.954-1.956 2.625-3.462.735-1.7 1.14-3.6.788-5.629-.793-4.811-4.823-8.52-9.617-8.52z" />
             </svg>
-            +91 8295588176
+            WhatsApp
           </a>
-          <span className="mt-2 text-xs text-gray-400 tracking-widest select-all">For bookings & info</span>
         </div>
 
       </div>
