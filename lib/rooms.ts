@@ -201,5 +201,5 @@ export const ROOMS: RoomType[] = [
 export const PRICING_TRANSPARENCY = {
   disclaimer: "All prices include: Room accommodation + All meals (Breakfast, Lunch, Dinner) + Applicable taxes + Hot water facilities",
   noHiddenCharges: "No hidden charges. Final price is exactly as shown.",
-  checkInOut: "Check-in: 2:00 PM | Check-out: 12:00 PM",
+  checkInOut: "Check-in: 24 Hours | Check-out: 24 Hours",
 } as const;

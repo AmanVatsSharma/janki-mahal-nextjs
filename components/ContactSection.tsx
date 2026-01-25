@@ -1,3 +1,5 @@
+import { BUSINESS_INFO } from "../lib/constants";
+
 export default function ContactSection() {
   return (
     <section id="contact" className="py-16 sm:py-24 bg-white">
@@ -20,8 +22,8 @@ export default function ContactSection() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">WhatsApp Us</h3>
             <p className="text-gray-700 mb-4">Quick response on WhatsApp</p>
-            <p className="text-lg font-semibold text-green-600 mb-4">+91 7250364323</p>
-            <a href="https://wa.me/917250364323" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
+            <p className="text-lg font-semibold text-green-600 mb-4">+91 8295588176</p>
+            <a href="https://wa.me/918295588176" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
               Chat Now
             </a>
           </div>
@@ -35,8 +37,8 @@ export default function ContactSection() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Call Us</h3>
             <p className="text-gray-700 mb-4">Available 24/7 for your queries</p>
-            <p className="text-lg font-semibold text-amber-600 mb-4">+91 7250364323</p>
-            <a href="tel:+917250364323" className="inline-block px-6 py-2 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-700 transition-colors">
+            <p className="text-lg font-semibold text-amber-600 mb-4">+91 8295588176</p>
+            <a href="tel:+918295588176" className="inline-block px-6 py-2 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-700 transition-colors">
               Call Now
             </a>
           </div>
@@ -55,8 +57,8 @@ export default function ContactSection() {
             <p className="text-sm text-gray-600 mb-2">Ayodhya, Uttar Pradesh 224123</p>
             <p className="text-sm text-gray-600 mb-4">India • ~1km from Ram Mandir</p>
             <div className="text-sm text-gray-600 mb-4">
-              <p><strong>Check-in:</strong> 2:00 PM</p>
-              <p><strong>Check-out:</strong> 12:00 PM</p>
+              <p><strong>Check-in:</strong> {BUSINESS_INFO.hours.checkIn}</p>
+              <p><strong>Check-out:</strong> {BUSINESS_INFO.hours.checkOut}</p>
             </div>
             <a href="https://maps.google.com/?q=Sri+Janaki+Mahal+Trust+Karsewakpuram+Vasudev+Gath+Ayodhya" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
               Get Directions

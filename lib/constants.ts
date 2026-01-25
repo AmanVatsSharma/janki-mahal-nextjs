@@ -6,8 +6,8 @@ export const BUSINESS_INFO = {
   description: "Spiritual Dharmshala in Ayodhya offering comfortable accommodation near Ram Mandir",
   tagline: "A Sacred Sanctuary in the Heart of Ayodhya",
   email: "vedpragyabharat@gmail.com",
-  phone: "+91 7250364323",
-  whatsapp: "+91 7250364323",
+  phone: "+91 8295588176",
+  whatsapp: "+91 8295588176",
   website: "https://srijanakimahaltrust.in",
   address: {
     street: "Vasudev Gath, Karsewakpuram",
@@ -22,13 +22,13 @@ export const BUSINESS_INFO = {
   },
   foundingDate: "2020",
   hours: {
-    checkIn: "2:00 PM",
-    checkOut: "12:00 PM",
+    checkIn: "24 Hours",
+    checkOut: "24 Hours",
     officeHours: "6:00 AM - 10:00 PM",
     emergency: "24/7 available",
   },
   social: {
-    whatsapp: "https://wa.me/917250364323",
+    whatsapp: "https://wa.me/918295588176",
   },
 } as const;
 
