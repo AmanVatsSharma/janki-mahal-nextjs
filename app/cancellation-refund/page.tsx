@@ -58,8 +58,8 @@ export default function CancellationRefundPage() {
               To cancel your booking, please contact us through any of the following methods:
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
-              <li><strong>WhatsApp:</strong> +91 7250364323</li>
-              <li><strong>Phone:</strong> +91 7250364323</li>
+              <li><strong>WhatsApp:</strong> +91 8295588176</li>
+              <li><strong>Phone:</strong> +91 8295588176</li>
               <li><strong>Email:</strong> vedpragyabharat@gmail.com</li>
             </ul>
             <p className="text-gray-700 leading-relaxed">
@@ -178,10 +178,10 @@ export default function CancellationRefundPage() {
                   <strong>Email:</strong> <a href="mailto:vedpragyabharat@gmail.com" className="text-amber-600 hover:underline">vedpragyabharat@gmail.com</a>
                 </p>
                 <p>
-                  <strong>Phone:</strong> <a href="tel:+917250364323" className="text-amber-600 hover:underline">+91 7250364323</a>
+                  <strong>Phone:</strong> <a href="tel:+918295588176" className="text-amber-600 hover:underline">+91 8295588176</a>
                 </p>
                 <p>
-                  <strong>WhatsApp:</strong> <a href="https://wa.me/917250364323" className="text-amber-600 hover:underline">+91 7250364323</a>
+                  <strong>WhatsApp:</strong> <a href="https://wa.me/918295588176" className="text-amber-600 hover:underline">+91 8295588176</a>
                 </p>
                 <p className="mt-4 text-sm text-gray-600">
                   <strong>Office Hours:</strong> 6:00 AM - 10:00 PM<br />
