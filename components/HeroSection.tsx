@@ -47,7 +47,7 @@ export default function HeroSection() {
           {/* Book Now (white) */}
           <a
             id="hero-book-now"
-            href="https://wa.me/917250364323?text=I%20would%20like%20to%20book%20a%20room%20at%20Sri%20Janaki%20Mahal%20Trust"
+            href="https://wa.me/918295588176?text=I%20would%20like%20to%20book%20a%20room%20at%20Sri%20Janaki%20Mahal%20Trust"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 transition-all duration-300 inline-flex items-center gap-2"
@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="flex flex-row gap-4 justify-center items-center">
             <a
               id="hero-call"
-              href="tel:+917250364323"
+              href="tel:+918295588176"
               className="px-6 py-3 rounded-xl bg-amber-600 text-white font-semibold hover:bg-amber-700 transition-all duration-300 inline-flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +73,7 @@ export default function HeroSection() {
             </a>
             <a
               id="hero-whatsapp"
-              href="https://wa.me/917250364323"
+              href="https://wa.me/918295588176"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-700 transition-all duration-300 inline-flex items-center gap-2"
@@ -88,14 +88,14 @@ export default function HeroSection() {
         {/* Mobile Number Displayed Nicely and Clickable */}
         <div className="mt-6 flex flex-col items-center">
           <a
-            href="tel:+917250364323"
+            href="tel:+918295588176"
             className="text-lg sm:text-xl font-semibold text-gray-700 bg-white/70 px-6 py-3 rounded-lg shadow inline-flex items-center gap-2 border border-amber-200 hover:bg-amber-50 transition cursor-pointer select-all"
             title="Click to Call"
           >
             <svg className="h-6 w-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.144l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
-            +91 7250364323
+            +91 8295588176
           </a>
           <span className="mt-2 text-xs text-gray-400 tracking-widest select-all">For bookings & info</span>
         </div>

@@ -33,7 +33,7 @@ export default function FloatingWhatsApp() {
       {/* Quick Actions (appears on hover) */}
       <div className="absolute bottom-16 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 space-y-2">
         <a
-          href="tel:+917250364323"
+          href="tel:+918295588176"
           className="flex items-center gap-3 bg-amber-600 hover:bg-amber-700 text-white rounded-full px-4 py-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           aria-label="Call us directly"
         >
