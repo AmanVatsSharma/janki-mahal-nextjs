@@ -65,8 +65,8 @@
       "permanent": true
     }
   ],
-  "trailingSlash": false,
+  "trailingSlash": true,
   "cleanUrls": true,
-  "buildCommand": "npm run build",
+  "buildCommand": "pnpm run build",
   "outputDirectory": "out"
 }
