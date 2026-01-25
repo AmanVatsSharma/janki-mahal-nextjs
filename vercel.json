@@ -67,6 +67,7 @@
   ],
   "trailingSlash": true,
   "cleanUrls": true,
+  "framework": "nextjs",
   "buildCommand": "pnpm run build",
   "outputDirectory": "out"
 }
