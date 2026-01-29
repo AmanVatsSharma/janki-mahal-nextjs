@@ -16,6 +16,22 @@ export default function AboutJanakiMahal() {
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Our establishment honors the divine presence of Janaki (Sita) and offers a harmonious blend of traditional Indian hospitality with modern comfort. Every corner of our dharmshala resonates with spiritual energy and devotion.
             </p>
+            {/* Alternate names / related searches (human-first) */}
+            <p className="text-sm text-gray-600 mb-6">
+              People also search us as{" "}
+              <a className="text-amber-700 hover:underline font-semibold" href="/sri-janki-mahal-ayodhya/">
+                Sri / Shri Janki Mahal Ayodhya
+              </a>
+              ,{" "}
+              <a className="text-amber-700 hover:underline font-semibold" href="/janaki-mahal-trust-ayodhya/">
+                Janaki Mahal Trust Ayodhya
+              </a>
+              , and{" "}
+              <a className="text-amber-700 hover:underline font-semibold" href="/verified-booking-sri-janki-mahal/">
+                verified booking
+              </a>
+              .
+            </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
