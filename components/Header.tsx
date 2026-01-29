@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { CONTACT_LINKS } from "../lib/constants";
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 bg-amber-600 rounded-lg flex items-center justify-center text-white font-bold text-lg group-hover:animate-glow transition-all">
               ॐ
             </div>
@@ -30,46 +31,58 @@ export default function Header() {
             <div className="sm:hidden">
               <h1 className="text-sm font-bold text-gray-900">Sri Janaki</h1>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a 
-              href="#home" 
+              href="/#home" 
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Home
             </a>
             <a 
-              href="#about" 
+              href="/#about" 
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               About
             </a>
             <a 
-              href="#rooms" 
+              href="/#rooms" 
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Rooms
             </a>
             <a 
-              href="#amenities" 
+              href="/#amenities" 
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Amenities
             </a>
             <a 
-              href="#gallery" 
+              href="/#gallery" 
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Gallery
             </a>
             <a 
-              href="#contact" 
+              href="/#contact" 
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Contact
             </a>
+            <Link
+              href="/verified-booking-sri-janki-mahal/"
+              className="text-sm font-semibold text-amber-700 hover:text-amber-800 transition-colors"
+            >
+              Verified Booking
+            </Link>
+            <Link
+              href="/blog/"
+              className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
+            >
+              Blog
+            </Link>
           </nav>
 
           {/* CTA Buttons */}
@@ -116,47 +129,61 @@ export default function Header() {
           isMobileMenuOpen ? 'block' : 'hidden'
         }`}>
           <a 
-            href="#home" 
+            href="/#home" 
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Home
           </a>
           <a 
-            href="#about" 
+            href="/#about" 
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             About
           </a>
           <a 
-            href="#rooms" 
+            href="/#rooms" 
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Rooms
           </a>
           <a 
-            href="#amenities" 
+            href="/#amenities" 
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Amenities
           </a>
           <a 
-            href="#gallery" 
+            href="/#gallery" 
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Gallery
           </a>
           <a 
-            href="#contact" 
+            href="/#contact" 
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Contact
           </a>
+          <Link
+            href="/verified-booking-sri-janki-mahal/"
+            onClick={closeMobileMenu}
+            className="block px-4 py-2 text-sm font-semibold text-amber-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Verified Booking
+          </Link>
+          <Link
+            href="/blog/"
+            onClick={closeMobileMenu}
+            className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Blog
+          </Link>
           <div className="flex gap-2 pt-2">
             <a
               href={CONTACT_LINKS.whatsapp}

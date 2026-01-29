@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BUSINESS_INFO, CONTACT_LINKS } from "../lib/constants";
 
 export default function Footer() {
   return (
@@ -17,10 +18,21 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="#home" className="hover:text-amber-600 transition-colors">Home</Link></li>
+              <li><Link href="/#home" className="hover:text-amber-600 transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-amber-600 transition-colors">About Us</Link></li>
-              <li><Link href="#rooms" className="hover:text-amber-600 transition-colors">Rooms</Link></li>
-              <li><Link href="#gallery" className="hover:text-amber-600 transition-colors">Gallery</Link></li>
+              <li><Link href="/#rooms" className="hover:text-amber-600 transition-colors">Rooms</Link></li>
+              <li><Link href="/#gallery" className="hover:text-amber-600 transition-colors">Gallery</Link></li>
+              <li><Link href="/verified-booking-sri-janki-mahal" className="hover:text-amber-600 transition-colors">Verified Booking</Link></li>
+              <li><Link href="/blog" className="hover:text-amber-600 transition-colors">Blog</Link></li>
+            </ul>
+
+            <h3 className="text-xl font-bold mb-4 mt-8">Popular searches</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li><Link href="/sri-janki-mahal-ayodhya" className="hover:text-amber-600 transition-colors">Sri / Shri Janki Mahal Ayodhya</Link></li>
+              <li><Link href="/janaki-mahal-trust-ayodhya" className="hover:text-amber-600 transition-colors">Janaki Mahal Trust Ayodhya</Link></li>
+              <li><Link href="/dharmshala-near-ram-mandir-ayodhya" className="hover:text-amber-600 transition-colors">Dharmshala near Ram Mandir</Link></li>
+              <li><Link href="/ac-non-ac-rooms-ayodhya-ram-mandir" className="hover:text-amber-600 transition-colors">AC & Non-AC rooms Ayodhya</Link></li>
+              <li><Link href="/meals-included-stay-ayodhya" className="hover:text-amber-600 transition-colors">Meals included stay Ayodhya</Link></li>
             </ul>
             
             {/* Legal Links */}
@@ -37,12 +49,12 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="tel:+918460839199" className="hover:text-amber-600 transition-colors">
-                  +91 8460839199
+                <a href={CONTACT_LINKS.phone} className="hover:text-amber-600 transition-colors">
+                  {BUSINESS_INFO.phone}
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/918460839199" className="hover:text-amber-600 transition-colors">
+                <a href={CONTACT_LINKS.whatsapp} className="hover:text-amber-600 transition-colors">
                   WhatsApp Us
                 </a>
               </li>
@@ -66,7 +78,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-yellow-500">⭐</span>
-                <span className="text-sm">4.5 Star Rated</span>
+                <span className="text-sm">Guest Loved</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-purple-500">🕐</span>
