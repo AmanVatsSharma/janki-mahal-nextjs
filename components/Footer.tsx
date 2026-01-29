@@ -37,12 +37,12 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="tel:+918295588176" className="hover:text-amber-600 transition-colors">
-                  +91 8295588176
+                <a href="tel:+918460839199" className="hover:text-amber-600 transition-colors">
+                  +91 8460839199
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/918295588176" className="hover:text-amber-600 transition-colors">
+                <a href="https://wa.me/918460839199" className="hover:text-amber-600 transition-colors">
                   WhatsApp Us
                 </a>
               </li>

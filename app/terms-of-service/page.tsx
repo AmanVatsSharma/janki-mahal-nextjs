@@ -166,10 +166,10 @@ export default function TermsOfServicePage() {
                   <strong>Email:</strong> <a href="mailto:vedpragyabharat@gmail.com" className="text-amber-600 hover:underline">vedpragyabharat@gmail.com</a>
                 </p>
                 <p>
-                  <strong>Phone:</strong> <a href="tel:+918295588176" className="text-amber-600 hover:underline">+91 8295588176</a>
+                  <strong>Phone:</strong> <a href="tel:+918460839199" className="text-amber-600 hover:underline">+91 8460839199</a>
                 </p>
                 <p>
-                  <strong>WhatsApp:</strong> <a href="https://wa.me/918295588176" className="text-amber-600 hover:underline">+91 8295588176</a>
+                  <strong>WhatsApp:</strong> <a href="https://wa.me/918460839199" className="text-amber-600 hover:underline">+91 8460839199</a>
                 </p>
               </div>
             </div>
