@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next'
+import { BUSINESS_INFO } from '../lib/constants'
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://srijanakimahaltrust.in'
+  // IMPORTANT (SEO): Sitemap must always point at the canonical domain.
+  const baseUrl = BUSINESS_INFO.website
   
   return [
     {
@@ -35,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
+    },
+    // High-intent landing page to capture Sri/Shri + Janki/Janaki + Ayodhya queries.
+    {
+      url: `${baseUrl}/sri-janki-mahal-ayodhya`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
   ]
 }

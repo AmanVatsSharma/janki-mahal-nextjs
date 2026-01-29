@@ -9,6 +9,25 @@ interface MetadataOptions {
   noIndex?: boolean;
 }
 
+/**
+ * Normalize a path for canonical URLs.
+ * - Ensures leading slash
+ * - Ensures trailing slash (this repo uses `trailingSlash: true` in `next.config.ts`)
+ * - Converts empty/undefined to "/"
+ */
+function normalizeCanonicalPath(path?: string): string {
+  const raw = (path ?? "").trim();
+  if (!raw) return "/";
+  const withLeading = raw.startsWith("/") ? raw : `/${raw}`;
+  return withLeading.endsWith("/") ? withLeading : `${withLeading}/`;
+}
+
+function canonicalUrlFromPath(path?: string): string {
+  const canonicalPath = normalizeCanonicalPath(path);
+  // Using the canonical domain from constants avoids drift between sitemap/robots/schema/metadata.
+  return new URL(canonicalPath, BUSINESS_INFO.website).toString();
+}
+
 export function generateMetadata({
   title,
   description = SEO_DEFAULTS.defaultDescription,
@@ -17,13 +36,21 @@ export function generateMetadata({
   noIndex = false,
 }: MetadataOptions = {}): Metadata {
   const fullTitle = title ? `${title} | ${SEO_DEFAULTS.siteName}` : SEO_DEFAULTS.defaultTitle;
-  const url = `${SEO_DEFAULTS.defaultTitle.replace(/\s+/g, '-').toLowerCase()}.in${path}`;
+  const canonical = canonicalUrlFromPath(path);
 
   return {
     title: fullTitle,
     description,
+    // Next will resolve relative URLs against this base. Keep this aligned with canonical domain.
+    metadataBase: new URL(BUSINESS_INFO.website),
     keywords: [
       "Sri Janaki Mahal",
+      "Sri Janki Mahal",
+      "Shri Janki Mahal",
+      "Sri Janaki Mahal Trust",
+      "Sri Janki Mahal Trust",
+      "Shri Janki Mahal Ayodhya",
+      "Janaki Mahal Trust Ayodhya",
       "Ayodhya accommodation",
       "Spiritual dharmshala",
       "Ram Mandir stay",
@@ -41,12 +68,13 @@ export function generateMetadata({
     openGraph: {
       type: "website",
       locale: SEO_DEFAULTS.locale,
-      url,
+      url: canonical,
       title: fullTitle,
       description,
       siteName: SEO_DEFAULTS.siteName,
       images: [
         {
+          // Keep absolute for scrapers/crawlers.
           url: ogImage,
           width: 1200,
           height: 630,
@@ -62,7 +90,7 @@ export function generateMetadata({
       creator: SEO_DEFAULTS.twitterHandle,
     },
     alternates: {
-      canonical: url,
+      canonical,
     },
     other: {
       "theme-color": "#d4a574",
@@ -74,7 +102,8 @@ export function generateMetadata({
 }
 
 export function generateStructuredData(type: "website" | "organization" | "localbusiness" | "lodgingbusiness") {
-  const baseUrl = "https://srijanakimahaltrust.in";
+  // IMPORTANT (SEO): derive schema URLs from the canonical domain.
+  const baseUrl = BUSINESS_INFO.website;
   
   const baseOrg = {
     "@type": "Organization",
@@ -114,11 +143,7 @@ export function generateStructuredData(type: "website" | "organization" | "local
     url: baseUrl,
     name: BUSINESS_INFO.name,
     description: BUSINESS_INFO.description,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${baseUrl}/?s={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
+    // NOTE: Avoid declaring a SearchAction unless you actually support on-site search.
   };
 
   const localBusiness = {
@@ -198,10 +223,7 @@ export function generateStructuredData(type: "website" | "organization" | "local
         value: true,
       },
     ],
-    starRating: {
-      "@type": "Rating",
-      ratingValue: "4.5",
-    },
+    // IMPORTANT (SEO): Do not claim ratings in structured data unless verifiable via public reviews.
   };
 
   switch (type) {

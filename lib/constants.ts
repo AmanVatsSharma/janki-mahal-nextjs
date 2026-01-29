@@ -8,7 +8,9 @@ export const BUSINESS_INFO = {
   email: "vedpragyabharat@gmail.com",
   phone: "+91 8460839199",
   whatsapp: "+91 8460839199",
-  website: "https://srijanakimahaltrust.in",
+  // IMPORTANT (SEO): This must always be the *current* canonical domain. All canonicals,
+  // sitemaps, structured data URLs, OG image URLs should ultimately derive from this field.
+  website: "https://www.srijanakimahaltrustofficial.com",
   address: {
     street: "Vasudev Gath, Karsewakpuram",
     city: "Ayodhya",
