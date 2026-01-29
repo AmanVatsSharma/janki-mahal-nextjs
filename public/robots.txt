@@ -11,7 +11,7 @@ Allow: /cancellation-refund
 Allow: /about
 
 # Sitemap
-Sitemap: https://srijanakimahaltrust.in/sitemap-index.xml
+Sitemap: https://www.srijanakimahaltrustofficial.com/sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1

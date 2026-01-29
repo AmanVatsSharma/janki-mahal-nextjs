@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-gray-700 leading-relaxed mb-4">
               Sri Janaki Mahal Trust (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
-              srijanakimahaltrust.in or use our services.
+              www.srijanakimahaltrustofficial.com or use our services.
             </p>
             <p className="text-gray-700 leading-relaxed">
               By using our website and services, you consent to the data practices described in this policy.
