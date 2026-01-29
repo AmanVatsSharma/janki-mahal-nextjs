@@ -9,6 +9,11 @@ export type BlogPost = {
   content: ReactNode;
 };
 
+/**
+ * IMPORTANT:
+ * This file is `.tsx` because it contains JSX content. Turbopack/Next build can fail
+ * if JSX is placed in a `.ts` file (it will try to parse it as plain TypeScript).
+ */
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-book-sri-janaki-mahal-trust-ayodhya",
