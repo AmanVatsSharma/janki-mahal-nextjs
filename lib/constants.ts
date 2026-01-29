@@ -31,6 +31,9 @@ export const BUSINESS_INFO = {
   },
   social: {
     whatsapp: "https://wa.me/918460839199",
+    // Optional (SEO/entity): add your Google Business Profile share URL here when available.
+    // Example: "https://g.page/r/<PLACE_ID>/review" or the GBP profile URL.
+    googleBusinessProfile: "",
   },
 } as const;
 

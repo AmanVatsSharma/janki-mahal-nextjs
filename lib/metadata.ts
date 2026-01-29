@@ -28,6 +28,16 @@ function canonicalUrlFromPath(path?: string): string {
   return new URL(canonicalPath, BUSINESS_INFO.website).toString();
 }
 
+function truthyStrings(values: Array<string | undefined | null>): string[] {
+  return values.filter((v): v is string => Boolean(v && v.trim()));
+}
+
+function googleMapsUrlFromCoordinates(): string {
+  const { latitude, longitude } = BUSINESS_INFO.address.coordinates;
+  // Search API URL is broadly supported and avoids needing an embedded placeId.
+  return `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+}
+
 export function generateMetadata({
   title,
   description = SEO_DEFAULTS.defaultDescription,
@@ -104,6 +114,11 @@ export function generateMetadata({
 export function generateStructuredData(type: "website" | "organization" | "localbusiness" | "lodgingbusiness") {
   // IMPORTANT (SEO): derive schema URLs from the canonical domain.
   const baseUrl = BUSINESS_INFO.website;
+  const hasMap = googleMapsUrlFromCoordinates();
+  const sameAs = truthyStrings([
+    BUSINESS_INFO.social.whatsapp,
+    BUSINESS_INFO.social.googleBusinessProfile,
+  ]);
   
   const baseOrg = {
     "@type": "Organization",
@@ -134,7 +149,7 @@ export function generateStructuredData(type: "website" | "organization" | "local
     foundingDate: BUSINESS_INFO.foundingDate,
     legalName: BUSINESS_INFO.legalName,
     description: BUSINESS_INFO.description,
-    sameAs: [BUSINESS_INFO.social.whatsapp],
+    sameAs,
   };
 
   const website = {
@@ -154,6 +169,8 @@ export function generateStructuredData(type: "website" | "organization" | "local
     telephone: BUSINESS_INFO.phone,
     email: BUSINESS_INFO.email,
     url: baseUrl,
+    hasMap,
+    sameAs,
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS_INFO.address.street,
@@ -167,6 +184,8 @@ export function generateStructuredData(type: "website" | "organization" | "local
       latitude: BUSINESS_INFO.address.coordinates.latitude,
       longitude: BUSINESS_INFO.address.coordinates.longitude,
     },
+    areaServed: "IN",
+    availableLanguage: ["English", "Hindi"],
     openingHours: "Mo-Su 00:00-23:59",
     priceRange: "₹₹",
     description: BUSINESS_INFO.description,
@@ -180,6 +199,8 @@ export function generateStructuredData(type: "website" | "organization" | "local
     telephone: BUSINESS_INFO.phone,
     email: BUSINESS_INFO.email,
     url: baseUrl,
+    hasMap,
+    sameAs,
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS_INFO.address.street,
@@ -193,6 +214,8 @@ export function generateStructuredData(type: "website" | "organization" | "local
       latitude: BUSINESS_INFO.address.coordinates.latitude,
       longitude: BUSINESS_INFO.address.coordinates.longitude,
     },
+    areaServed: "IN",
+    availableLanguage: ["English", "Hindi"],
     checkinTime: "14:00",
     checkoutTime: "12:00",
     priceRange: "₹1,250 - ₹4,150",
