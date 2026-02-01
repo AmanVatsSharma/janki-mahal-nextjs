@@ -163,7 +163,7 @@ export default function TermsOfServicePage() {
                 <p>Ayodhya, Uttar Pradesh 224123</p>
                 <p>India</p>
                 <p className="mt-4">
-                  <strong>Email:</strong> <a href="mailto:vedpragyabharat@gmail.com" className="text-amber-600 hover:underline">vedpragyabharat@gmail.com</a>
+                  <strong>Email:</strong> <a href="mailto:contact@srijanakimahaltrustofficial.com" className="text-amber-600 hover:underline">contact@srijanakimahaltrustofficial.com</a>
                 </p>
                 <p>
                   <strong>Phone:</strong> <a href="tel:+918460839199" className="text-amber-600 hover:underline">+91 8460839199</a>

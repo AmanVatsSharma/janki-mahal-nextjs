@@ -95,15 +95,7 @@ export default function Footer() {
               Registered Charitable Trust | Vasudev Gath, Karsewakpuram, Ayodhya, UP 224123
             </p>
             <p className="text-sm">
-              Created with <span className="text-red-500">❤</span> and devotion for spiritual seekers and pilgrims by{" "}
-              <a 
-                href="https://vedpragya.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-amber-600 hover:text-amber-500 transition-colors"
-              >
-                Vedpragya.com
-              </a>
+              Created with <span className="text-red-500">❤</span> and devotion for spiritual seekers and pilgrims
             </p>
           </div>
         </div>

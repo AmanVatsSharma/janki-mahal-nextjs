@@ -60,7 +60,7 @@ export default function CancellationRefundPage() {
             <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
               <li><strong>WhatsApp:</strong> +91 8460839199</li>
               <li><strong>Phone:</strong> +91 8460839199</li>
-              <li><strong>Email:</strong> vedpragyabharat@gmail.com</li>
+              <li><strong>Email:</strong> contact@srijanakimahaltrustofficial.com</li>
             </ul>
             <p className="text-gray-700 leading-relaxed">
               Please provide your booking reference number and guest name for faster processing.
@@ -175,7 +175,7 @@ export default function CancellationRefundPage() {
                 <p>Ayodhya, Uttar Pradesh 224123</p>
                 <p>India</p>
                 <p className="mt-4">
-                  <strong>Email:</strong> <a href="mailto:vedpragyabharat@gmail.com" className="text-amber-600 hover:underline">vedpragyabharat@gmail.com</a>
+                  <strong>Email:</strong> <a href="mailto:contact@srijanakimahaltrustofficial.com" className="text-amber-600 hover:underline">contact@srijanakimahaltrustofficial.com</a>
                 </p>
                 <p>
                   <strong>Phone:</strong> <a href="tel:+918460839199" className="text-amber-600 hover:underline">+91 8460839199</a>
