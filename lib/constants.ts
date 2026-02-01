@@ -45,8 +45,8 @@ export const CONTACT_LINKS = {
 } as const;
 
 export const GOOGLE_ANALYTICS = {
-  measurementId: "AW-17664529026",
-  conversionId: "AW-17664529026/Zkz9CLjxg7AbELP8qedB",
+  measurementId: "AW-17922029438",
+  conversionId: "AW-17922029438/Zkz9CLjxg7AbELP8qedB",
 } as const;
 
 export const SEO_DEFAULTS = {
