@@ -34,20 +34,16 @@ function fmt(prefix: string, parts: unknown[]): unknown[] {
 export const logger = {
   debug: (...args: unknown[]) => {
     if (isProd()) return;
-    // eslint-disable-next-line no-console
     console.debug(...fmt("[DEBUG]", args));
   },
   info: (...args: unknown[]) => {
     if (isProd()) return;
-    // eslint-disable-next-line no-console
     console.info(...fmt("[INFO]", args));
   },
   warn: (...args: unknown[]) => {
-    // eslint-disable-next-line no-console
     console.warn(...fmt("[WARN]", args));
   },
   error: (...args: unknown[]) => {
-    // eslint-disable-next-line no-console
     console.error(...fmt("[ERROR]", args));
   },
 } as const;

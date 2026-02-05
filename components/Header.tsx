@@ -35,42 +35,42 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a 
-              href="/#home" 
+            <Link
+              href="/#home"
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Home
-            </a>
-            <a 
-              href="/#about" 
+            </Link>
+            <Link
+              href="/#about"
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               About
-            </a>
-            <a 
-              href="/#rooms" 
+            </Link>
+            <Link
+              href="/#rooms"
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Rooms
-            </a>
-            <a 
-              href="/#amenities" 
+            </Link>
+            <Link
+              href="/#amenities"
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Amenities
-            </a>
-            <a 
-              href="/#gallery" 
+            </Link>
+            <Link
+              href="/#gallery"
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Gallery
-            </a>
-            <a 
-              href="/#contact" 
+            </Link>
+            <Link
+              href="/#contact"
               className="text-sm font-medium text-gray-900 hover:text-amber-600 transition-colors"
             >
               Contact
-            </a>
+            </Link>
             <Link
               href="/verified-booking-sri-janki-mahal/"
               className="text-sm font-semibold text-amber-700 hover:text-amber-800 transition-colors"
@@ -128,48 +128,48 @@ export default function Header() {
         <nav className={`md:hidden pb-4 space-y-2 transition-all duration-300 ${
           isMobileMenuOpen ? 'block' : 'hidden'
         }`}>
-          <a 
-            href="/#home" 
+          <Link
+            href="/#home"
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Home
-          </a>
-          <a 
-            href="/#about" 
+          </Link>
+          <Link
+            href="/#about"
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             About
-          </a>
-          <a 
-            href="/#rooms" 
+          </Link>
+          <Link
+            href="/#rooms"
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Rooms
-          </a>
-          <a 
-            href="/#amenities" 
+          </Link>
+          <Link
+            href="/#amenities"
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Amenities
-          </a>
-          <a 
-            href="/#gallery" 
+          </Link>
+          <Link
+            href="/#gallery"
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Gallery
-          </a>
-          <a 
-            href="/#contact" 
+          </Link>
+          <Link
+            href="/#contact"
             onClick={closeMobileMenu}
             className="block px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
           >
             Contact
-          </a>
+          </Link>
           <Link
             href="/verified-booking-sri-janki-mahal/"
             onClick={closeMobileMenu}

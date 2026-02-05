@@ -125,16 +125,25 @@ export default function RoomsSection() {
   const [selectedRoom, setSelectedRoom] = useState<typeof ROOMS[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  React.useEffect(() => {
+    if (!isModalOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow || "auto";
+    };
+  }, [isModalOpen]);
+
   const openModal = (room: typeof ROOMS[0]) => {
     setSelectedRoom(room);
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedRoom(null);
-    document.body.style.overflow = 'auto';
   };
 
   return (
