@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { generateMetadata as generateBaseMetadata } from "../../lib/metadata";
+import { BUSINESS_INFO, CONTACT_LINKS } from "../../lib/constants";
 
 export const metadata: Metadata = generateBaseMetadata({
   title: "Privacy Policy",
@@ -203,10 +204,10 @@ export default function PrivacyPolicyPage() {
                   <strong>Email:</strong> <a href="mailto:contact@srijanakimahaltrustofficial.com" className="text-amber-600 hover:underline">contact@srijanakimahaltrustofficial.com</a>
                 </p>
                 <p>
-                  <strong>Phone:</strong> <a href="tel:+918460839199" className="text-amber-600 hover:underline">+91 8460839199</a>
+                  <strong>Phone:</strong> <a href={CONTACT_LINKS.phone} className="text-amber-600 hover:underline">{BUSINESS_INFO.phone}</a>
                 </p>
                 <p>
-                  <strong>WhatsApp:</strong> <a href="https://wa.me/918460839199" className="text-amber-600 hover:underline">+91 8460839199</a>
+                  <strong>WhatsApp:</strong> <a href={CONTACT_LINKS.whatsapp} className="text-amber-600 hover:underline">{BUSINESS_INFO.phone}</a>
                 </p>
               </div>
             </div>
