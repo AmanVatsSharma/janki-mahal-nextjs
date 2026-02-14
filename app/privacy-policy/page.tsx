@@ -201,7 +201,7 @@ export default function PrivacyPolicyPage() {
                 <p>Ayodhya, Uttar Pradesh 224123</p>
                 <p>India</p>
                 <p className="mt-4">
-                  <strong>Email:</strong> <a href="mailto:contact@srijanakimahaltrustofficial.com" className="text-amber-600 hover:underline">contact@srijanakimahaltrustofficial.com</a>
+                  <strong>Email:</strong> <a href="mailto:srijanakimahaltrustofficial@gmail.com" className="text-amber-600 hover:underline">srijanakimahaltrustofficial@gmail.com</a>
                 </p>
                 <p>
                   <strong>Phone:</strong> <a href={CONTACT_LINKS.phone} className="text-amber-600 hover:underline">{BUSINESS_INFO.phone}</a>

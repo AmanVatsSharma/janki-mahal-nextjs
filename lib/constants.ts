@@ -5,7 +5,7 @@ export const BUSINESS_INFO = {
   legalName: "Sri Janaki Mahal Trust",
   description: "Spiritual Dharmshala in Ayodhya offering comfortable accommodation near Ram Mandir",
   tagline: "A Sacred Sanctuary in the Heart of Ayodhya",
-  email: "contact@srijanakimahaltrustofficial.com",
+  email: "srijanakimahaltrustofficial@gmail.com",
   phone: "+91 9102319329",
   whatsapp: "+91 9102319329",
   // IMPORTANT (SEO): This must always be the *current* canonical domain. All canonicals,
