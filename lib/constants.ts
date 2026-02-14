@@ -6,8 +6,8 @@ export const BUSINESS_INFO = {
   description: "Spiritual Dharmshala in Ayodhya offering comfortable accommodation near Ram Mandir",
   tagline: "A Sacred Sanctuary in the Heart of Ayodhya",
   email: "contact@srijanakimahaltrustofficial.com",
-  phone: "+91 8936059096",
-  whatsapp: "+91 8936059096",
+  phone: "+91 9102319329",
+  whatsapp: "+91 9102319329",
   // IMPORTANT (SEO): This must always be the *current* canonical domain. All canonicals,
   // sitemaps, structured data URLs, OG image URLs should ultimately derive from this field.
   website: "https://www.srijanakimahaltrustofficial.com",
@@ -30,7 +30,7 @@ export const BUSINESS_INFO = {
     emergency: "24/7 available",
   },
   social: {
-    whatsapp: "https://wa.me/918936059096",
+    whatsapp: "https://wa.me/919102319329",
     // Optional (SEO/entity): add your Google Business Profile share URL here when available.
     // Example: "https://g.page/r/<PLACE_ID>/review" or the GBP profile URL.
     googleBusinessProfile: "",
