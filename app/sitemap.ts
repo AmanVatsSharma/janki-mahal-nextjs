@@ -1,11 +1,31 @@
 import { MetadataRoute } from 'next'
 import { BUSINESS_INFO } from '../lib/constants'
+import { getPostsByLang } from "../lib/blog/posts";
 
 export const dynamic = 'force-static'
+
+function normalizeLastModified(dateString: string): Date {
+  const parsed = new Date(dateString);
+  return Number.isNaN(parsed.getTime()) ? new Date() : parsed;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // IMPORTANT (SEO): Sitemap must always point at the canonical domain.
   const baseUrl = BUSINESS_INFO.website
+  const englishBlogPosts = getPostsByLang("en");
+  const hindiBlogPosts = getPostsByLang("hi");
+  const englishBlogEntries: MetadataRoute.Sitemap = englishBlogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}/`,
+    lastModified: normalizeLastModified(post.published),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+  const hindiBlogEntries: MetadataRoute.Sitemap = hindiBlogPosts.map((post) => ({
+    url: `${baseUrl}/hi/blog/${post.slug}/`,
+    lastModified: normalizeLastModified(post.published),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
   
   return [
     {
@@ -80,42 +100,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // Blog posts (static export): list explicitly so crawlers discover them faster.
     {
-      url: `${baseUrl}/blog/how-to-book-sri-janaki-mahal-trust-ayodhya/`,
+      url: `${baseUrl}/hi/blog/`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.65,
+      changeFrequency: "weekly",
+      priority: 0.7,
     },
-    {
-      url: `${baseUrl}/blog/best-stay-near-ram-mandir-ayodhya-checklist/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.65,
-    },
-    {
-      url: `${baseUrl}/blog/ac-vs-non-ac-rooms-ayodhya-season-guide/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/meals-included-stay-ayodhya-what-to-expect/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/avoid-fake-bookings-ayodhya-verified-contact-checklist/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/ayodhya-trip-stay-tips-for-pilgrims/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
+    ...englishBlogEntries,
+    ...hindiBlogEntries,
   ]
 }
