@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { generateMetadata as generateBaseMetadata } from "../../lib/metadata";
-import { BLOG_POSTS } from "../../lib/blog/posts";
+import { getPostsByLang } from "../../lib/blog/posts";
 
 export const metadata: Metadata = generateBaseMetadata({
   title: "Blog & Guides",
@@ -13,7 +13,7 @@ export const metadata: Metadata = generateBaseMetadata({
 export const dynamic = "force-static";
 
 export default function BlogIndexPage() {
-  const posts = [...BLOG_POSTS].sort((a, b) => b.published.localeCompare(a.published));
+  const posts = getPostsByLang("en");
 
   return (
     <main className="min-h-screen bg-[#faf8f3] py-12">

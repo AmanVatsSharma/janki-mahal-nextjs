@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BLOG_POSTS, getPostBySlug } from "../../../lib/blog/posts";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { getPostBySlug, getPostsByLang } from "../../../lib/blog/posts";
 import { generateMetadata as generateBaseMetadata } from "../../../lib/metadata";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return BLOG_POSTS.map((p) => ({ slug: p.slug }));
+  return getPostsByLang("en").map((post) => ({ slug: post.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(params.slug, "en");
   if (!post) {
     return generateBaseMetadata({
       title: "Blog Post",
@@ -30,7 +32,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(params.slug, "en");
   if (!post) notFound();
 
   return (
@@ -55,7 +57,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <p className="text-gray-700 text-lg mb-8">{post.description}</p>
 
           <div className="prose prose-gray max-w-none">
-            {post.content}
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
           </div>
 
           <hr className="my-10 border-gray-200" />
