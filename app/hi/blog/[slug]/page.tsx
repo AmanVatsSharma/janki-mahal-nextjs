@@ -1,0 +1,76 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { getPostBySlug, getPostsByLang } from "../../../../lib/blog/posts";
+import { generateMetadata as generateBaseMetadata } from "../../../../lib/metadata";
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getPostsByLang("hi").map((post) => ({ slug: post.slug }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const post = getPostBySlug(params.slug, "hi");
+  if (!post) {
+    return generateBaseMetadata({
+      title: "ब्लॉग पोस्ट",
+      description: "ब्लॉग पोस्ट नहीं मिला।",
+      path: `/hi/blog/${params.slug}`,
+      noIndex: true,
+    });
+  }
+
+  return generateBaseMetadata({
+    title: post.title,
+    description: post.description,
+    path: `/hi/blog/${post.slug}`,
+  });
+}
+
+export default function HindiBlogPostPage({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug, "hi");
+  if (!post) notFound();
+
+  return (
+    <main className="min-h-screen bg-[#faf8f3] py-12">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-6">
+          <Link className="text-amber-700 font-semibold hover:underline" href="/hi/blog/">
+            ← ब्लॉग पर वापस जाएं
+          </Link>
+        </div>
+
+        <article className="bg-white rounded-2xl shadow-lg p-6 sm:p-10">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mb-3">
+            <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-800 font-semibold">
+              {post.category}
+            </span>
+            <span>{post.published}</span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
+          <p className="text-gray-700 text-lg mb-8">{post.description}</p>
+
+          <div className="prose prose-gray max-w-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+          </div>
+
+          <hr className="my-10 border-gray-200" />
+
+          <div className="bg-amber-50 rounded-xl p-5">
+            <p className="text-gray-900 font-semibold mb-2">बुकिंग सहायता</p>
+            <p className="text-gray-700 mb-3">
+              सत्यापित बुकिंग और उपलब्धता के लिए होम पेज पर दिए गए संपर्क विकल्प का उपयोग करें।
+            </p>
+            <Link className="text-amber-700 font-semibold hover:underline" href="/#contact">
+              संपर्क पेज पर जाएं →
+            </Link>
+          </div>
+        </article>
+      </div>
+    </main>
+  );
+}
