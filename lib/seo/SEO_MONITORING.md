@@ -4,7 +4,11 @@ Use this document once per month (and during major updates) to keep SEO stable w
 
 ## 1) Google Search Console (GSC)
 
-- **Sitemaps**: `sitemap.xml` submitted and processed successfully.
+- **Sitemaps**: Submit this URL in GSC → Sitemaps:
+  ```
+  https://www.srijanakimahaltrustofficial.com/sitemap.xml
+  ```
+  Ensure it is submitted and processed successfully.
 - **Pages/Indexing**:
   - Check “Pages” report for excluded pages (soft 404, blocked by robots, duplicate canonical).
   - Spot-check key URLs using URL inspection:
