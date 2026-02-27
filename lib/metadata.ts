@@ -7,6 +7,8 @@ interface MetadataOptions {
   path?: string;
   ogImage?: string;
   noIndex?: boolean;
+  /** Hreflang: add when page has alternate language versions. For EN-only, we emit en + x-default. */
+  languages?: Record<string, string>;
 }
 
 /**
@@ -44,9 +46,12 @@ export function generateMetadata({
   path = "",
   ogImage = SEO_DEFAULTS.ogImage,
   noIndex = false,
+  languages: customLanguages,
 }: MetadataOptions = {}): Metadata {
   const fullTitle = title ? `${title} | ${SEO_DEFAULTS.siteName}` : SEO_DEFAULTS.defaultTitle;
   const canonical = canonicalUrlFromPath(path);
+  const languages =
+    customLanguages ?? { en: canonical, "x-default": canonical };
 
   return {
     title: fullTitle,
@@ -101,6 +106,7 @@ export function generateMetadata({
     },
     alternates: {
       canonical,
+      languages,
     },
     other: {
       "theme-color": "#d4a574",
@@ -120,10 +126,34 @@ export function generateStructuredData(type: "website" | "organization" | "local
     BUSINESS_INFO.social.googleBusinessProfile,
   ]);
   
+  const alternateNames = [
+    "Janaki Mahal Trust",
+    "Janaki Mahal",
+    "Janaki Mahal Ayodhya",
+    "Janaki Mahal Booking",
+    "Janaki Mahal Official",
+    "Janaki Mahal Trust Ayodhya",
+    "Sri Janki Mahal Trust",
+    "Sri Janaki Mahal",
+    "Sri Janki Mahal",
+    "Ram Janki Mahal",
+    "Ram Janki Mahal Ayodhya",
+    "Ram Janki Mahal Trust",
+    "Shri Janki Mahal Trust",
+    "Shri Janaki Mahal Trust",
+    "Shri Janaki Mahal",
+    "Shri Janki Mahal",
+    "Janki Mahal Trust",
+    "Janki Mahal",
+    "Janki Mahal Ayodhya",
+    "Janki Mahal Trust Ayodhya",
+  ];
+
   const baseOrg = {
     "@type": "Organization",
     "@id": `${baseUrl}/#organization`,
     name: BUSINESS_INFO.name,
+    alternateName: alternateNames,
     url: baseUrl,
     logo: {
       "@type": "ImageObject",
@@ -135,7 +165,14 @@ export function generateStructuredData(type: "website" | "organization" | "local
       contactType: "customer service",
       availableLanguage: ["English", "Hindi"],
       areaServed: "IN",
-      hoursAvailable: "24/7",
+      hoursAvailable: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      ],
     },
     email: BUSINESS_INFO.email,
     address: {
@@ -165,6 +202,7 @@ export function generateStructuredData(type: "website" | "organization" | "local
     "@type": "LocalBusiness",
     "@id": `${baseUrl}/#localbusiness`,
     name: BUSINESS_INFO.name,
+    alternateName: alternateNames,
     image: `${baseUrl}/og.jpg`,
     telephone: BUSINESS_INFO.phone,
     email: BUSINESS_INFO.email,
@@ -195,6 +233,7 @@ export function generateStructuredData(type: "website" | "organization" | "local
     "@type": "LodgingBusiness",
     "@id": `${baseUrl}/#lodgingbusiness`,
     name: BUSINESS_INFO.name,
+    alternateName: alternateNames,
     image: `${baseUrl}/og.jpg`,
     telephone: BUSINESS_INFO.phone,
     email: BUSINESS_INFO.email,

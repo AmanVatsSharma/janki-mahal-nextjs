@@ -82,7 +82,9 @@ export default function RootLayout({
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="google-site-verification" content="your-google-verification-code" />
+        {process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && (
+          <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION} />
+        )}
         <meta name="google-ads-disclosure" content="This site uses Google Ads for advertising purposes" />
       </head>
       <body
