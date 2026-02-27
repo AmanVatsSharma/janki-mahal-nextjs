@@ -51,7 +51,7 @@ export const GOOGLE_ANALYTICS = {
 
 export const SEO_DEFAULTS = {
   siteName: BUSINESS_INFO.name,
-  defaultTitle: `${BUSINESS_INFO.name} - Spiritual Dharmshala in Ayodhya`,
+  defaultTitle: "Sri Janaki Mahal Trust - Official Online Booking Sri Janki Mahal Trust Official Contact Number Shri Janki Mahal Trust Booking",
   defaultDescription: "Sri Janaki Mahal - Spiritual Dharmshala in Ayodhya. Book your sacred stay with comfortable rooms and warm hospitality.",
   ogImage: `${BUSINESS_INFO.website}/og.jpg`,
   twitterHandle: "@srijanakimahal",
