@@ -14,7 +14,7 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Sri Janaki Mahal Trust Ayodhya - Official Website | Verified Hotel",
   description:
-    "Official website of Sri Janaki Mahal Trust - Registered charitable trust providing comfortable hotel accommodation in Ayodhya near Ram Mandir. Verified business. Official booking: +91 7759925612",
+    "Official website of Sri Janaki Mahal Trust - Registered charitable trust providing comfortable hotel accommodation in Ayodhya near Ram Mandir. Verified business. Official booking: +91 9893563047",
   path: "/official",
 });
 

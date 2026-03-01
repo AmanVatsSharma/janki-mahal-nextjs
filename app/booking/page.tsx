@@ -14,7 +14,7 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Book Rooms at Sri Janaki Mahal Trust Ayodhya - Official",
   description:
-    "Book AC and Non-AC rooms at Sri Janaki Mahal Trust Ayodhya. All meals included. Call or WhatsApp +91 7759925612 for availability and confirmation.",
+    "Book AC and Non-AC rooms at Sri Janaki Mahal Trust Ayodhya. All meals included. Call or WhatsApp +91 9893563047 for availability and confirmation.",
   path: "/booking",
 });
 

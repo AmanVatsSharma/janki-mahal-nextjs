@@ -14,7 +14,7 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Sri Janaki Mahal Trust Room Prices - AC & Non-AC Tariffs",
   description:
-    "Room prices at Sri Janaki Mahal Trust Ayodhya. AC and Non-AC rooms from ₹1,250. All meals included. Call +91 7759925612 for current tariffs.",
+    "Room prices at Sri Janaki Mahal Trust Ayodhya. AC and Non-AC rooms from ₹1,250. All meals included. Call +91 9893563047 for current tariffs.",
   path: "/room-prices",
 });
 

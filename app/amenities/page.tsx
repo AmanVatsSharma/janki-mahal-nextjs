@@ -14,7 +14,7 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Sri Janaki Mahal Trust Amenities - Meals, Facilities",
   description:
-    "Amenities at Sri Janaki Mahal Trust Ayodhya: all meals included, hot water, AC/Non-AC rooms, 24/7 support. Near Ram Mandir. Call +91 7759925612.",
+    "Amenities at Sri Janaki Mahal Trust Ayodhya: all meals included, hot water, AC/Non-AC rooms, 24/7 support. Near Ram Mandir. Call +91 9893563047.",
   path: "/amenities",
 });
 

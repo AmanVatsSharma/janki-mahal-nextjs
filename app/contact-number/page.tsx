@@ -14,7 +14,7 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Sri Janaki Mahal Trust Official Contact Number - Call/WhatsApp",
   description:
-    "Official contact number for Sri Janaki Mahal Trust (Janaki Mahal Trust, Sri Janki Mahal Trust Ayodhya). Call or WhatsApp +91 7759925612 for verified bookings.",
+    "Official contact number for Sri Janaki Mahal Trust (Janaki Mahal Trust, Sri Janki Mahal Trust Ayodhya). Call or WhatsApp +91 9893563047 for verified bookings.",
   path: "/contact-number",
 });
 

@@ -14,7 +14,7 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Official Booking Sri Janaki Mahal Trust - Verified Contact",
   description:
-    "Book rooms at Sri Janaki Mahal Trust Ayodhya through official channels only. Call or WhatsApp +91 7759925612 for verified booking confirmation. Avoid scams.",
+    "Book rooms at Sri Janaki Mahal Trust Ayodhya through official channels only. Call or WhatsApp +91 9893563047 for verified booking confirmation. Avoid scams.",
   path: "/official-booking",
 });
 

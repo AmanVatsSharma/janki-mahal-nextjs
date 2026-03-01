@@ -6,8 +6,8 @@ export const BUSINESS_INFO = {
   description: "Spiritual Dharmshala in Ayodhya offering comfortable accommodation near Ram Mandir",
   tagline: "A Sacred Sanctuary in the Heart of Ayodhya",
   email: "srijanakimahaltrustofficial@gmail.com",
-  phone: "+91 7759925612",
-  whatsapp: "+91 7759925612",
+  phone: "+91 9893563047",
+  whatsapp: "+91 9893563047",
   // IMPORTANT (SEO): This must always be the *current* canonical domain. All canonicals,
   // sitemaps, structured data URLs, OG image URLs should ultimately derive from this field.
   website: "https://www.srijanakimahaltrustofficial.com",
@@ -30,7 +30,7 @@ export const BUSINESS_INFO = {
     emergency: "24/7 available",
   },
   social: {
-    whatsapp: "https://wa.me/917759925612",
+    whatsapp: "https://wa.me/919893563047",
     // Google Business Profile / Maps listing URL (for schema sameAs + local SEO)
     googleBusinessProfile: "https://www.google.com/maps?cid=13157769449180505616",
   },

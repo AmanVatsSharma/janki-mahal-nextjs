@@ -14,7 +14,7 @@ import { BUSINESS_INFO } from "../../lib/constants";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Gallery - Sri Janaki Mahal Trust Ayodhya",
   description:
-    "Photos of Sri Janaki Mahal Trust - rooms, facilities, and spiritual environment in Ayodhya near Ram Mandir. Book at +91 7759925612.",
+    "Photos of Sri Janaki Mahal Trust - rooms, facilities, and spiritual environment in Ayodhya near Ram Mandir. Book at +91 9893563047.",
   path: "/gallery",
 });
 

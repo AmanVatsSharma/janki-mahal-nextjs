@@ -14,7 +14,7 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export const metadata: Metadata = generateBaseMetadata({
   title: "Group Booking Sri Janaki Mahal Trust - Yatri Mandal",
   description:
-    "Group booking at Sri Janaki Mahal Trust Ayodhya for yatri mandals and families. Multiple rooms, all meals included. Call +91 7759925612.",
+    "Group booking at Sri Janaki Mahal Trust Ayodhya for yatri mandals and families. Multiple rooms, all meals included. Call +91 9893563047.",
   path: "/group-booking",
 });
 
