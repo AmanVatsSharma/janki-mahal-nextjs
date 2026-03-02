@@ -4,6 +4,9 @@ import Script from "next/script";
 import "./globals.css";
 import { generateMetadata, generateStructuredData } from "../lib/metadata";
 import { GOOGLE_ANALYTICS } from "../lib/constants";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import FloatingCallButton from "../components/FloatingCallButton";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -90,7 +93,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfairDisplay.variable} bg-[#faf8f3] antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
+        <FloatingCallButton />
         
         {/* Global error handler */}
         <Script id="error-handler" strategy="afterInteractive">

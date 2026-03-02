@@ -19,6 +19,12 @@
   --font-serif: "Playfair Display", serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import AboutJanakiMahal from "../components/AboutJanakiMahal";
 import RoomsSection from "../components/RoomsSection";
@@ -6,8 +5,6 @@ import AmenitiesSection from "../components/AmenitiesSection";
 import GallerySection from "../components/GallerySection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
-import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import Script from "next/script";
 import { BUSINESS_INFO } from "../lib/constants";
 
@@ -44,7 +41,6 @@ export default function Home() {
       />
 
       <main className="min-h-screen">
-        <Header />
         <HeroSection />
         <AboutJanakiMahal />
         <RoomsSection />
@@ -52,8 +48,6 @@ export default function Home() {
         <GallerySection />
         <TestimonialsSection />
         <ContactSection />
-        <Footer />
-        <FloatingWhatsApp />
       </main>
     </>
   );
